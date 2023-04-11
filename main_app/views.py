@@ -1,9 +1,13 @@
 from django.shortcuts import render
-
+from django.views.generic.edit import CreateView
 # Create your views here.
 from django.http import HttpResponse
 
 from .models import Dog
+
+class DogCreate(CreateView):
+  model = Dog
+  fields = '__all__'
 
 # Add dogs view
 def dogs_index(request):

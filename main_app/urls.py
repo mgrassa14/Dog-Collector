@@ -11,5 +11,7 @@ urlpatterns = [
     path('dogs/', views.dogs_index, name='index'),
     # dogs detail (show page)
     # localhost:8000/dogs/dog_id
-    path('dogs/<int:dog_id>/', views.dogs_detail, name='detail')
+    path('dogs/<int:dog_id>/', views.dogs_detail, name='detail'),
+    # route to show a form and create a dog
+    path('dogs/create', views.DogCreate.as_view(), name='dogs_create'),
 ]
