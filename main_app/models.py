@@ -29,8 +29,8 @@ class Dog(models.Model):
         return reverse('detail', kwargs={'dog_id': self.id})
 
     # add this new method
-    def fed_for_today(self):
-        return self.feeding_set.filter(date=date.today()).count() >= len(MEALS)
+    # def fed_for_today(self):
+    #     return self.feeding_set.filter(date=date.today()).count() >= len(MEALS)
 
 
 
